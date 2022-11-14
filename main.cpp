@@ -20,7 +20,7 @@ int main()
 
     CNetBase oNet;
 
-    #if 1
+    #if 0
     iRet = oNet.CreateTCPServer("127.0.0.1");
     if(-1 == iRet) { return iRet; }
 
