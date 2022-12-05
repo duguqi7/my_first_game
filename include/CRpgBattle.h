@@ -14,7 +14,7 @@ class CRpgBattle
         CRpgBattle();
         virtual ~CRpgBattle();
         //common functions
-        void SetGamePlayerNum(int players);
+        void SetGamePlayerNum(int num);
         int  GetGamePlayerNum(void);
 
         //server functions
@@ -25,7 +25,23 @@ class CRpgBattle
 
     protected:
     private:
-        int iWorkMode;
+        //common member
+        int m_iWorkMode;
+        int m_iPlayerNum;
+
+        //server member
+        int m_iGameStep;
+
+        //client member
+        int m_iPlayerId;
+        int m_iAliveStat;
+        int m_iHP;
+        int m_iAtk;
+        int m_iDef;
+        int m_iSpd;
+
+        //private function
+        void GamePlayTask(void);
 };
 
 #endif // RPG_BATTLE_H
